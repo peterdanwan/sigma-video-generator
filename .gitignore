@@ -1,6 +1,8 @@
 logs/
 *.pyc
 __pychache__/
+pyrightconfig.json
+paths.txt
 .env
 venv
 input/background_videos
