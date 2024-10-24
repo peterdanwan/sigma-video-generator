@@ -3,5 +3,5 @@ directories:
   music_dir: "input/music"
   generated_text_dir: "input/generated_text"
   generated_tts_dir: "input/generated_tts"
-  rendered_dir: "rendered"
+  output_dir: "output"
   blender_executable: "/Applications/Blender.app/Contents/MacOS/Blender"
