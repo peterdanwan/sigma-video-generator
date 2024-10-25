@@ -1,7 +1,11 @@
+text_input_file: "input/input.txt"
+bgm_audio_path: "input/music/byebye.mp3"
+bgm_json_path: "input/music/byebye.json"
+tts_volume_adjustment: 6
+bgm_volume_adjustment: -6
+allow_timestretch: false
 directories:
-  background_videos_dir: "input/background_videos"
   music_dir: "input/music"
-  generated_text_dir: "input/generated_text"
   generated_tts_dir: "input/generated_tts"
-  output_dir: "output"
+  mixed_audio_dir: "input/mixed_audio"
   blender_executable: "/Applications/Blender.app/Contents/MacOS/Blender"
