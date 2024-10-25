@@ -1,21 +1,5 @@
-# Ignore contents of input directory but keep structure
 input/*
 !input/.gitkeep
-!input/background_videos
-!input/generated_text
-!input/generated_tts
-!input/images
-!input/music
-input/background_videos/*
-!input/background_videos/.gitkeep
-input/generated_text/*
-!input/generated_text/.gitkeep
-input/generated_tts/*
-!input/generated_tts/.gitkeep
-input/images/*
-!input/images/.gitkeep
-input/music/*
-!input/music/.gitkeep
 
 output/*
 !output/.gitkeep
