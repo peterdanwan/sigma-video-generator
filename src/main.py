@@ -78,7 +78,7 @@ def main():
         for i, (audio_file, metadata_file) in enumerate(generated_tts_filenames):
             audio_file_path = os.path.join(config["directories"]["generated_tts_dir"], audio_file)
             metadata_file_path = os.path.join(config["directories"]["generated_tts_dir"], metadata_file)
-            mixed_audio_path = os.path.join(config["directories"]["mixed_audio_dir"], f"mixed_audio_{i+1}.mp3")
+            mixed_audio_path = os.path.join(config["directories"]["mixed_audio_dir"])
 
             # Ensure the directory exists
             os.makedirs(os.path.dirname(mixed_audio_path), exist_ok=True)
