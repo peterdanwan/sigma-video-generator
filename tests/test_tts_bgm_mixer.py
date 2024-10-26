@@ -1,4 +1,3 @@
-# main.py
 from utils import load_config, log_action
 from text_preparation import read_and_format_input_text, write_to_input_file
 from batch_tts_generator import batch_generate_tts
@@ -6,21 +5,22 @@ from tts_bgm_mixer import TTSBGMMixer
 import sys
 import os
 
-def main():
+def test_tts_bgm_mixer():
     log_action(" ")
-    log_action("Start new run of main.py")
+    log_action("Start new run (testing tts bgm mixer)")
     try:
         # Load config
         config = load_config()
 
-        # Process the text input file
-        text_input_file = config["text_input_file"]
-        lines = read_and_format_input_text(text_input_file)
-        log_action("Read input from input/input.txt")
-
         # Generate tts audio and metadata for each line in the input
-        generated_tts_filenames = batch_generate_tts(lines)
-        log_action("Batch TTS generation completed successfully")
+        generated_tts_filenames = []  # This will store each file's info as a tuple
+
+        def return_already_generated_tts_file():
+            return "the_wiser_you_are_the_b6nyrwfl.mp3", "the_wiser_you_are_the_b6nyrwfl.json"
+
+        audio_filename, metadata_filename = return_already_generated_tts_file()
+        generated_tts_filenames.append((audio_filename, metadata_filename))  # Add to list
+        log_action("return_already_generated_tts_file() completed successfully")
 
         # Now generated_tts_filenames contains all filenames for later use
 
@@ -50,6 +50,3 @@ def main():
     except Exception as e:
         log_action(f"Error in main execution: {str(e)}")
         sys.exit(1)
-
-if __name__ == "__main__":
-    main()
